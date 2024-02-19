@@ -1,0 +1,19 @@
+﻿using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
+
+namespace EticketMVC.Models
+{
+    public class Actor
+    {
+        [Key]
+        public int ActorID { get; set; }
+        public string ProfilePictureURL { get; set; }
+        public string FullName {get; set; }
+        public string Bio { get; set; }
+
+        //Relationship
+        public List<Actor_Movie> Actors_Movies{ get; set; }
+    }
+
+
+}
